@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="830" viewBox="0 0 1180 830" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <text x="590" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#0F172A">献血服务 Agent · 四层架构</text>
+
+  <!-- ===== 对话层 ===== -->
+  <rect x="60" y="50" width="760" height="110" rx="10" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="76" y="62" width="64" height="22" rx="4" fill="#3B82F6"/>
+  <text x="108" y="77" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">对话层</text>
+
+  <rect x="90" y="88" width="390" height="58" rx="6" fill="#FFFFFF" stroke="#93C5FD"/>
+  <text x="285" y="108" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">frontend/ 对话页（Vue3 · 5173）</text>
+  <text x="285" y="126" text-anchor="middle" font-size="11.5" fill="#334155">SSE 流式输出 · 引用展开 · 轨迹面板</text>
+  <text x="285" y="141" text-anchor="middle" font-size="11.5" fill="#334155">确认卡片：健康征询本人作答（HITL）</text>
+
+  <line x1="484" y1="117" x2="514" y2="117" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="520" y="88" width="280" height="58" rx="6" fill="#FFFFFF" stroke="#93C5FD"/>
+  <text x="660" y="108" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">agent-service 对话接口</text>
+  <text x="660" y="126" text-anchor="middle" font-size="11.5" fill="#334155">/api/chat（SSE 流式）</text>
+  <text x="660" y="141" text-anchor="middle" font-size="11.5" fill="#334155">/api/chat/confirm（报名确认）</text>
+
+  <line x1="420" y1="160" x2="420" y2="196" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="432" y="184" font-size="11.5" fill="#475569">/api/chat（SSE）· /api/chat/confirm</text>
+
+  <!-- ===== LLM 平台（右侧） ===== -->
+  <rect x="880" y="200" width="250" height="130" rx="10" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="1005" y="226" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400E">智谱 BigModel（OpenAI 兼容）</text>
+  <text x="1005" y="250" text-anchor="middle" font-size="12" fill="#334155">glm-4-flash（对话，免费档）</text>
+  <text x="1005" y="270" text-anchor="middle" font-size="12" fill="#334155">embedding-3（1024 维向量）</text>
+  <text x="1005" y="296" text-anchor="middle" font-size="11" fill="#94A3B8">重试 · 超时 · 用量统计</text>
+
+  <line x1="820" y1="265" x2="876" y2="265" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="848" y="256" text-anchor="middle" font-size="10.5" fill="#475569">HTTPS</text>
+
+  <!-- ===== 编排层 ===== -->
+  <rect x="60" y="200" width="760" height="130" rx="10" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="1.5"/>
+  <rect x="76" y="212" width="64" height="22" rx="4" fill="#8B5CF6"/>
+  <text x="108" y="227" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">编排层</text>
+
+  <rect x="90" y="240" width="165" height="72" rx="6" fill="#FFFFFF" stroke="#C4B5FD"/>
+  <text x="172" y="260" text-anchor="middle" font-size="13" font-weight="bold" fill="#4C1D95">react.py</text>
+  <text x="172" y="278" text-anchor="middle" font-size="11" fill="#334155">手写 ReAct 循环</text>
+  <text x="172" y="293" text-anchor="middle" font-size="11" fill="#334155">≤5 轮 · 超轮次兜底</text>
+  <text x="172" y="308" text-anchor="middle" font-size="11" fill="#334155">run / run_stream（SSE）</text>
+
+  <rect x="268" y="240" width="165" height="72" rx="6" fill="#FFFFFF" stroke="#C4B5FD"/>
+  <text x="350" y="260" text-anchor="middle" font-size="13" font-weight="bold" fill="#4C1D95">prompts.py</text>
+  <text x="350" y="278" text-anchor="middle" font-size="11" fill="#334155">第一原则：政策必检索</text>
+  <text x="350" y="293" text-anchor="middle" font-size="11" fill="#334155">硬性边界 · 拒答规范</text>
+  <text x="350" y="308" text-anchor="middle" font-size="11" fill="#334155">few-shot 行为示例</text>
+
+  <rect x="446" y="240" width="165" height="72" rx="6" fill="#FFFFFF" stroke="#C4B5FD"/>
+  <text x="528" y="260" text-anchor="middle" font-size="13" font-weight="bold" fill="#4C1D95">llm.py</text>
+  <text x="528" y="278" text-anchor="middle" font-size="11" fill="#334155">LLM 客户端（兼容层）</text>
+  <text x="528" y="293" text-anchor="middle" font-size="11" fill="#334155">失败重试 · 指数退避</text>
+  <text x="528" y="308" text-anchor="middle" font-size="11" fill="#334155">token 用量统计</text>
+
+  <rect x="624" y="240" width="165" height="72" rx="6" fill="#FFFFFF" stroke="#C4B5FD"/>
+  <text x="706" y="260" text-anchor="middle" font-size="13" font-weight="bold" fill="#4C1D95">memory.py</text>
+  <text x="706" y="278" text-anchor="middle" font-size="11" fill="#334155">会话记忆</text>
+  <text x="706" y="293" text-anchor="middle" font-size="11" fill="#334155">PG 持久化（chat_*）</text>
+  <text x="706" y="308" text-anchor="middle" font-size="11" fill="#334155">读写按 user_id 隔离</text>
+
+  <line x1="420" y1="330" x2="420" y2="366" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="432" y="353" font-size="11.5" fill="#475569">工具调用（Function Calling）</text>
+
+  <!-- ===== 工具层 ===== -->
+  <rect x="60" y="370" width="760" height="150" rx="10" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+  <rect x="76" y="382" width="64" height="22" rx="4" fill="#10B981"/>
+  <text x="108" y="397" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">工具层</text>
+
+  <rect x="90" y="402" width="700" height="32" rx="6" fill="#FFFFFF" stroke="#6EE7B7"/>
+  <text x="440" y="423" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#065F46">registry.py 统一拦截：参数白名单 · 注入字段忽略 · 计时与结构化日志（不落凭证）</text>
+
+  <rect x="90" y="444" width="165" height="58" rx="6" fill="#FFFFFF" stroke="#6EE7B7"/>
+  <text x="172" y="463" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#065F46">search_policy</text>
+  <text x="172" y="480" text-anchor="middle" font-size="11" fill="#334155">政策条文检索（RAG）</text>
+  <text x="172" y="495" text-anchor="middle" font-size="11" fill="#334155">top-k + 阈值过滤</text>
+
+  <rect x="268" y="444" width="165" height="58" rx="6" fill="#FFFFFF" stroke="#6EE7B7"/>
+  <text x="350" y="463" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#065F46">query_record</text>
+  <text x="350" y="480" text-anchor="middle" font-size="11" fill="#334155">本人献血记录/证书</text>
+  <text x="350" y="495" text-anchor="middle" font-size="11" fill="#334155">身份取注入 context</text>
+
+  <rect x="446" y="444" width="165" height="58" rx="6" fill="#FFFFFF" stroke="#6EE7B7"/>
+  <text x="528" y="463" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#065F46">list_events</text>
+  <text x="528" y="480" text-anchor="middle" font-size="11" fill="#334155">查可报名活动</text>
+  <text x="528" y="495" text-anchor="middle" font-size="11" fill="#334155">status 枚举过滤</text>
+
+  <rect x="624" y="444" width="165" height="58" rx="6" fill="#FFFFFF" stroke="#6EE7B7"/>
+  <text x="706" y="463" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#065F46">create_appointment</text>
+  <text x="706" y="480" text-anchor="middle" font-size="11" fill="#334155">报名草稿（不直接提交）</text>
+  <text x="706" y="495" text-anchor="middle" font-size="11" fill="#334155">sha256 幂等键</text>
+
+  <line x1="250" y1="520" x2="250" y2="556" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="76" y="546" font-size="11.5" fill="#475569">向量检索 · 草稿 · 会话 · 日志</text>
+
+  <line x1="700" y1="520" x2="700" y2="556" stroke="#475569" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="556" y="546" font-size="11.5" fill="#475569">HTTP + 用户JWT + X-Agent-Token</text>
+
+  <!-- ===== 数据层 ===== -->
+  <rect x="60" y="560" width="1060" height="140" rx="10" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="76" y="572" width="64" height="22" rx="4" fill="#64748B"/>
+  <text x="108" y="587" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">数据层</text>
+
+  <rect x="90" y="600" width="300" height="84" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="240" y="620" text-anchor="middle" font-size="13" font-weight="bold" fill="#0F172A">PostgreSQL 16 + pgvector（5432）</text>
+  <text x="240" y="638" text-anchor="middle" font-size="11" fill="#334155">政策向量 · appointment_drafts 报名草稿</text>
+  <text x="240" y="653" text-anchor="middle" font-size="11" fill="#334155">agent_runs / llm_calls / tool_calls 可观测</text>
+  <text x="240" y="668" text-anchor="middle" font-size="11" fill="#334155">chat_sessions / chat_messages 会话历史</text>
+
+  <rect x="420" y="600" width="300" height="84" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="570" y="620" text-anchor="middle" font-size="13" font-weight="bold" fill="#0F172A">Express 后端（3100，复用不改）</text>
+  <text x="570" y="638" text-anchor="middle" font-size="11" fill="#334155">/api/agent/* 三只读接口（最小侵入）</text>
+  <text x="570" y="653" text-anchor="middle" font-size="11" fill="#334155">报名提交走既有接口 · 双中间件校验</text>
+  <text x="570" y="668" text-anchor="middle" font-size="11" fill="#334155">MySQL 业务库 · 区块链存证</text>
+
+  <rect x="750" y="600" width="340" height="84" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="920" y="620" text-anchor="middle" font-size="13" font-weight="bold" fill="#0F172A">身份与凭证链路</text>
+  <text x="920" y="638" text-anchor="middle" font-size="11" fill="#334155">用户 JWT：backend 签发，Agent 验签注入</text>
+  <text x="920" y="653" text-anchor="middle" font-size="11" fill="#334155">user_id / user_token：服务端注入 context</text>
+  <text x="920" y="668" text-anchor="middle" font-size="11" fill="#334155">X-Agent-Token：服务间防护（附加）</text>
+
+  <!-- ===== 安全边界 ===== -->
+  <rect x="60" y="730" width="1060" height="70" rx="10" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="590" y="756" text-anchor="middle" font-size="13" font-weight="bold" fill="#B91C1C">硬性安全边界：① 身份由服务端注入工具上下文，模型不可见、不可指定（杜绝越权）</text>
+  <text x="590" y="780" text-anchor="middle" font-size="12.5" fill="#B91C1C">② 写操作只出草稿，用户在确认卡片亲自提交（HITL）　③ 健康征询 / 知情同意由本人作答　④ 日志不落任何凭证</text>
+</svg>

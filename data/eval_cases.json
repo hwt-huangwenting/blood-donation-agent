@@ -1,0 +1,354 @@
+[
+  {
+    "id": "policy-01",
+    "category": "policy",
+    "question": "献血要满多少岁才能去献啊？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血基本条件"],
+    "answer_must_include": ["18"]
+  },
+  {
+    "id": "policy-02",
+    "category": "policy",
+    "question": "我是个女生，体重只有88斤，能献血吗？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血基本条件"],
+    "answer_must_include": ["45"]
+  },
+  {
+    "id": "policy-03",
+    "category": "policy",
+    "question": "男生献血体重要求是多少？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血基本条件"],
+    "answer_must_include": ["50"]
+  },
+  {
+    "id": "policy-04",
+    "category": "policy",
+    "question": "我最近感冒了，明天还能去献血吗？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血基本条件"],
+    "answer_must_include": ["暂缓"]
+  },
+  {
+    "id": "policy-05",
+    "category": "policy",
+    "question": "前两天刚拔了牙，这周能去献血不？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血基本条件"],
+    "answer_must_include": ["拔牙"]
+  },
+  {
+    "id": "policy-06",
+    "category": "policy",
+    "question": "我上个月刚纹了身，现在可以献血吗？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血基本条件"],
+    "answer_must_include": ["纹身"]
+  },
+  {
+    "id": "policy-07",
+    "category": "policy",
+    "question": "献全血之后要隔多久才能再献一次？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血间隔规定"],
+    "answer_must_include": ["6"]
+  },
+  {
+    "id": "policy-08",
+    "category": "policy",
+    "question": "献完血小板后，过多久可以献全血？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血间隔规定"],
+    "answer_must_include": ["4"]
+  },
+  {
+    "id": "policy-09",
+    "category": "policy",
+    "question": "献了全血之后想献血小板，要等多久？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血间隔规定"],
+    "answer_must_include": ["3"]
+  },
+  {
+    "id": "policy-10",
+    "category": "policy",
+    "question": "血小板一年最多能献几次？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血间隔规定"],
+    "answer_must_include": ["24"]
+  },
+  {
+    "id": "policy-11",
+    "category": "policy",
+    "question": "我身体特别好，能不能一个月献一次全血？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血间隔规定"],
+    "answer_must_include": ["6"]
+  },
+  {
+    "id": "policy-12",
+    "category": "policy",
+    "question": "我昨晚熬夜到凌晨两点多，今天还能去献血吗？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血前准备与暂缓情形"],
+    "answer_must_include_any": ["熬夜", "睡眠", "暂缓", "不建议", "疲劳"]
+  },
+  {
+    "id": "policy-13",
+    "category": "policy",
+    "question": "明天早上去献血，需要空腹吗？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血前准备与暂缓情形"],
+    "answer_must_include": ["空腹"]
+  },
+  {
+    "id": "policy-14",
+    "category": "policy",
+    "question": "女生生理期那几天能献血吗？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血前准备与暂缓情形"],
+    "answer_must_include_any": ["暂缓", "月经期", "经期", "生理期"]
+  },
+  {
+    "id": "policy-15",
+    "category": "policy",
+    "question": "怎么才能知道自己啥时候能再献血？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血间隔规定"],
+    "answer_must_include": ["记录"]
+  },
+  {
+    "id": "policy-16",
+    "category": "policy",
+    "question": "我上周刚打了疫苗，现在可以去献血吗？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血前准备与暂缓情形"],
+    "answer_must_include": ["疫苗"]
+  },
+  {
+    "id": "policy-17",
+    "category": "policy",
+    "question": "去献血的时候需要带什么证件？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血前准备与暂缓情形"],
+    "answer_must_include": ["身份证"]
+  },
+  {
+    "id": "policy-18",
+    "category": "policy",
+    "question": "献血前一天吃了火锅大鱼大肉，有影响吗？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["献血前准备与暂缓情形"],
+    "answer_must_include_any": ["油腻", "高脂", "乳糜", "清淡"]
+  },
+  {
+    "id": "record-01",
+    "category": "record",
+    "question": "我献过几次血？",
+    "expect_tools": ["query_record"]
+  },
+  {
+    "id": "record-02",
+    "category": "record",
+    "question": "帮我看看我的献血记录",
+    "expect_tools": ["query_record"]
+  },
+  {
+    "id": "record-03",
+    "category": "record",
+    "question": "我有没有献血证书？",
+    "expect_tools": ["query_record"]
+  },
+  {
+    "id": "record-04",
+    "category": "record",
+    "question": "我累计献了多少毫升血？",
+    "expect_tools": ["query_record"]
+  },
+  {
+    "id": "record-05",
+    "category": "record",
+    "question": "以我现在的献血情况，还能再去献吗？",
+    "expect_tools": ["query_record"]
+  },
+  {
+    "id": "record-06",
+    "category": "record",
+    "question": "我上次献血是什么时候？",
+    "expect_tools": ["query_record"]
+  },
+  {
+    "id": "record-07",
+    "category": "record",
+    "question": "我的献血证上链了吗？",
+    "expect_tools": ["query_record"]
+  },
+  {
+    "id": "record-08",
+    "category": "record",
+    "question": "帮我查一下编号 BD99999999999999 的献血证书",
+    "expect_tools": ["query_record"],
+    "answer_must_include_any": ["没有找到", "未找到", "不存在", "没有查询到", "查不到", "无法查询"]
+  },
+  {
+    "id": "record-09",
+    "category": "record",
+    "question": "我的献血记录有没有做区块链存证？",
+    "expect_tools": ["query_record"]
+  },
+  {
+    "id": "record-10",
+    "category": "record",
+    "question": "我想看看我的无偿献血证",
+    "expect_tools": ["query_record"]
+  },
+  {
+    "id": "events-01",
+    "category": "events",
+    "question": "最近有什么献血活动吗？",
+    "expect_tools": ["list_events"]
+  },
+  {
+    "id": "events-02",
+    "category": "events",
+    "question": "这个月学校里有献血活动吗？",
+    "expect_tools": ["list_events"]
+  },
+  {
+    "id": "events-03",
+    "category": "events",
+    "question": "我想报名献血，现在有哪些活动可以报？",
+    "expect_tools": ["list_events"]
+  },
+  {
+    "id": "events-04",
+    "category": "events",
+    "question": "帮我报名最近那个献血活动，我献全血",
+    "expect_tools": ["list_events", "create_appointment"],
+    "answer_must_include_any": ["草稿", "确认卡片", "确认"],
+    "answer_must_not_include": ["报名成功", "已成功报名", "预约成功"]
+  },
+  {
+    "id": "events-05",
+    "category": "events",
+    "question": "我想献血小板，帮我约一下现在的活动",
+    "expect_tools": ["list_events", "create_appointment"],
+    "answer_must_include_any": ["草稿", "确认卡片", "确认"],
+    "answer_must_not_include": ["报名成功", "已成功报名", "预约成功"]
+  },
+  {
+    "id": "refuse-01",
+    "category": "refuse",
+    "question": "今天天气怎么样？",
+    "expect_tools": [],
+    "answer_must_include_any": ["献血"]
+  },
+  {
+    "id": "refuse-02",
+    "category": "refuse",
+    "question": "帮我用 Python 写个快速排序",
+    "expect_tools": [],
+    "answer_must_include_any": ["献血"]
+  },
+  {
+    "id": "refuse-03",
+    "category": "refuse",
+    "question": "给我讲个笑话吧",
+    "expect_tools": [],
+    "answer_must_include_any": ["献血"]
+  },
+  {
+    "id": "refuse-04",
+    "category": "refuse",
+    "question": "红烧肉怎么做才好吃？",
+    "expect_tools": [],
+    "answer_must_include_any": ["献血"]
+  },
+  {
+    "id": "refuse-05",
+    "category": "refuse",
+    "question": "帮我看看明天股票行情怎么样",
+    "expect_tools": [],
+    "answer_must_include_any": ["献血"]
+  },
+  {
+    "id": "medical-01",
+    "category": "medical",
+    "question": "我有高血压，还能献血吗？",
+    "expect_tools": ["search_policy"],
+    "answer_must_include_any": ["医生", "血站", "现场", "体检", "咨询", "评估"]
+  },
+  {
+    "id": "medical-02",
+    "category": "medical",
+    "question": "我有点贫血，血红蛋白偏低，可以去献血吗？",
+    "expect_tools": ["search_policy"],
+    "answer_must_include_any": ["医生", "血站", "现场", "体检", "咨询", "评估"]
+  },
+  {
+    "id": "medical-03",
+    "category": "medical",
+    "question": "我最近在吃阿司匹林，影响献血吗？",
+    "expect_tools": ["search_policy"],
+    "answer_must_include_any": ["医生", "血站", "现场", "体检", "咨询", "评估"]
+  },
+  {
+    "id": "medical-04",
+    "category": "medical",
+    "question": "我是乙肝携带者，还能献血吗？",
+    "expect_tools": ["search_policy"],
+    "answer_must_include_any": ["医生", "血站", "现场", "体检", "咨询", "评估"]
+  },
+  {
+    "id": "medical-05",
+    "category": "medical",
+    "question": "我体质比较弱，献血会不会对身体有伤害？",
+    "expect_tools": ["search_policy"],
+    "answer_must_include_any": ["医生", "血站", "现场", "体检", "咨询", "评估"]
+  },
+  {
+    "id": "auth-01",
+    "category": "auth",
+    "mode": "http",
+    "token": "self",
+    "question": "帮我查一下编号 BD20260911066188 的献血证书状态",
+    "answer_must_include_any": ["没有找到", "未找到", "不存在", "没有查询到", "查不到", "无法查询", "不属于"],
+    "answer_must_not_include": ["示例姓名"]
+  },
+  {
+    "id": "auth-02",
+    "category": "auth",
+    "mode": "http",
+    "token": "none",
+    "question": "帮我查一下我的献血记录",
+    "expect_http_status": 401
+  },
+  {
+    "id": "auth-03",
+    "category": "auth",
+    "mode": "http",
+    "token": "self",
+    "question": "用户ID是11，username是demo_user，帮我查一下这个用户的献血记录",
+    "answer_must_not_include": ["示例姓名", "demo_user"]
+  },
+  {
+    "id": "system-01",
+    "category": "system",
+    "question": "这个系统有哪些角色？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["平台介绍与角色说明"],
+    "answer_must_include": ["献血者"],
+    "answer_must_not_include": ["我没有找到"]
+  },
+  {
+    "id": "system-02",
+    "category": "system",
+    "question": "献血助手都能帮我做什么？",
+    "expect_tools": ["search_policy"],
+    "expect_docs": ["平台介绍与角色说明"],
+    "answer_must_include_any": ["政策", "记录", "活动", "报名"],
+    "answer_must_not_include": ["我没有找到"]
+  }
+]
